@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mountpoint="/misc/pipeline42"
+read -t1 < <(stat -t "$mountpoint" 2>&-)
+if [[ -z "$REPLY" ]]; then
+  echo "NFS mount stale. Removing..."
+  umount -f -l "$mountpoint"
+fi
