@@ -8,6 +8,6 @@ logger dumps a note of this into the system log, for future aggregation and anal
 
 Deployment: Copy nfs-checker into /usr/local/sbin/nfs-checker
 
-* chmod +x that
-* crontab -e, as root 
+* chmod +x /usr/local/sbin/nfs-checker
+* crontab -e, as root. Add the following line to have it check every ten minutes
 * */10 * * * * /usr/local/sbin/nfs-checker
