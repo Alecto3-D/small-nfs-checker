@@ -10,4 +10,5 @@ Deployment: Copy nfs-checker into /usr/local/sbin/nfs-checker
 
 * chmod +x /usr/local/sbin/nfs-checker
 * crontab -e, as root. Add the following line to have it check every ten minutes
-* */10 * * * * /usr/local/sbin/nfs-checker
+
+ */10 * * * * /usr/local/sbin/nfs-checker
